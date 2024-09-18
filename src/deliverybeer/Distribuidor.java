@@ -55,6 +55,7 @@ public class Distribuidor {
             System.out.println("O horário está fora do intervalo de funcionamento.");
         }
         System.out.println("Funcionamento do Distribuidor: 18:00 as 00:00");
+        System.out.println("--------------------------------------------");
     }
     public static boolean isHorarioDentroDoIntervalo(LocalTime horario, LocalTime abertura, LocalTime fechamento) {
         return !horario.isBefore(abertura) && !horario.isAfter(fechamento);

@@ -1,3 +1,5 @@
+package deliverybeer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -5,16 +7,15 @@ import java.util.Scanner;
 
 public class Pedido {
 
-    // Atributos
+ 
     private List<String> bebidasAlc;
     private List<String> bebidasSemAlc;
     private List<String> petiscos;
     private List<String> outros;
     private List<String> pedido;
 
-    // Construtor
+   
     public Pedido() {
-        // Inicializar as coleções
         bebidasAlc = Arrays.asList("Cerveja", "Vinho", "Vodka", "Rum", "Tequila");
         bebidasSemAlc = Arrays.asList("Água", "Suco de laranja", "Refrigerante", "Chá gelado", "Café");
         petiscos = Arrays.asList("Amendoim", "Batata chips", "Torresmo");
@@ -22,7 +23,7 @@ public class Pedido {
         pedido = new ArrayList<>();
     }
 
-    // Método para adicionar itens ao pedido
+    
     public void adicionarItem(int categoria, int index) {
         switch (categoria) {
             case 1:
@@ -38,7 +39,6 @@ public class Pedido {
                 adicionarItem(outros, index);
                 break;
             default:
-                System.out.println("Categoria inválida.");
                 break;
         }
     }
@@ -51,20 +51,30 @@ public class Pedido {
         }
     }
 
-    // Método para visualizar o pedido atual
+    
     public List<String> visualizarPedido() {
         return new ArrayList<>(pedido);
     }
 
-    // Método para exibir todos os itens disponíveis
     public void exibirItensDisponiveis() {
-        System.out.println("Bebidas Alcoólicas: " + bebidasAlc);
-        System.out.println("Bebidas Não Alcoólicas: " + bebidasSemAlc);
-        System.out.println("Petiscos: " + petiscos);
-        System.out.println("Outros Itens: " + outros);
+        System.out.println("Bebidas Alcoólicas:");
+        for (int i = 0; i < bebidasAlc.size(); i++) {
+            System.out.println((i + 1) + ". " + bebidasAlc.get(i));
+        }
+        System.out.println("Bebidas Não Alcoólicas:");
+        for (int i = 0; i < bebidasSemAlc.size(); i++) {
+            System.out.println((i + 1) + ". " + bebidasSemAlc.get(i));
+        }
+        System.out.println("Petiscos:");
+        for (int i = 0; i < petiscos.size(); i++) {
+            System.out.println((i + 1) + ". " + petiscos.get(i));
+        }
+        System.out.println("Outros Itens:");
+        for (int i = 0; i < outros.size(); i++) {
+            System.out.println((i + 1) + ". " + outros.get(i));
+        }
     }
 
-    // Método para executar o menu de pedidos
     public void executar() {
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
@@ -79,10 +89,10 @@ public class Pedido {
             System.out.println("5. Finalizar Pedido");
 
             int escolha = scanner.nextInt();
-            scanner.nextLine(); // Consumir a quebra de linha
+            scanner.nextLine();
 
             if (escolha == 5) {
-                continuar = false;
+                continuar = false; 
             } else if (escolha >= 1 && escolha <= 4) {
                 exibirItensDisponiveis();
                 System.out.println("Escolha um item da categoria " + escolha + ":");
@@ -93,7 +103,6 @@ public class Pedido {
             }
         }
 
-        // Exibir o pedido finalizado
         System.out.println("Seu pedido foi finalizado!");
         System.out.println("Itens do pedido: " + visualizarPedido());
         scanner.close();

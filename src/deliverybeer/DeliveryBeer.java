@@ -16,7 +16,9 @@ public class DeliveryBeer {
         d1.ordenarEcomprar();
         d1.funcionamento();
         
-//        Pedido p1 = new Pedido();;
-//        p1.adicionarItem(1, 0);;
+        Pedido p1 = new Pedido();
+        p1.adicionarItem(0, 0);
+        p1.executar();
+        p1.visualizarPedido();
     }
 }
