@@ -1,0 +1,1 @@
+Projeto da disciplina de Programação Orientada a Objetos, que consiste em criar um sistema simples de delivey de bebidas (Tema escolhido pelo grupo), onde o programa cadastra um usuário e localiza um distribuidor mais próximo de sua residência, com base no seu CEP, e assim podendo ter acesso ao catálogo do distribuidor e fazer seu pedido.
