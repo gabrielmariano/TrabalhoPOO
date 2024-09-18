@@ -16,10 +16,10 @@ public class Pedido {
 
    
     public Pedido() {
-        bebidasAlc = Arrays.asList("Cerveja", "Vinho", "Vodka", "Rum", "Tequila");
-        bebidasSemAlc = Arrays.asList("Água", "Suco de laranja", "Refrigerante", "Chá gelado", "Café");
+        bebidasAlc = Arrays.asList("Cerveja", "Vinho", "Vodka", "Whisky", "Espumante");
+        bebidasSemAlc = Arrays.asList("Água", "Energético", "Refrigerante", "Tônica", "Sucos");
         petiscos = Arrays.asList("Amendoim", "Batata chips", "Torresmo");
-        outros = Arrays.asList("Frutas frescas", "Doces variados", "Pães e torradas", "Molhos e condimentos", "Saladas pequenas");
+        outros = Arrays.asList("Gelo", "Copo descartável", "Talheres descartáveis", "Abridor de garrafa", "Isqueiro");
         pedido = new ArrayList<>();
     }
 
