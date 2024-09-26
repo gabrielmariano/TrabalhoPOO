@@ -74,8 +74,4 @@ public class Cliente {
     public void cadastrar() {
         System.out.println("Cadastrado realizado com sucesso!");
     }
-
-   
-    public void consultar() {
-    }
 }
